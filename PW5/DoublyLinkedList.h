@@ -21,5 +21,7 @@ struct Node *createNode(int value, struct Node *previous, struct Node *next);
 void appendToList(struct DoublyLinkedList *list, int value);
 void clearList(struct DoublyLinkedList *list);
 void printList(struct DoublyLinkedList list);
+struct Node *minOfList(struct DoublyLinkedList list);
+struct Node *maxOfList(struct DoublyLinkedList list);
 
 #endif

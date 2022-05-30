@@ -65,3 +65,35 @@ void printList(struct DoublyLinkedList list) {
 
     printf("\n");
 }
+
+struct Node *minOfList(struct DoublyLinkedList list) {
+    struct Node *min = list.head;
+    if (min == NULL)
+        return NULL;
+    
+    struct Node *current = min;
+    
+    do {
+        if (current->value < min->value)
+            min = current;
+        current = current->next;
+    } while (current != list.head);
+
+    return min;
+}
+
+struct Node *maxOfList(struct DoublyLinkedList list) {
+    struct Node *max = list.head;
+    if (max == NULL)
+        return NULL;
+    
+    struct Node *current = max;
+    
+    do {
+        if (current->value > max->value)
+            max = current;
+        current = current->next;
+    } while (current != list.head);
+
+    return max;
+}
