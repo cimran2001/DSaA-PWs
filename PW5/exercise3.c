@@ -10,14 +10,10 @@ int main() {
     appendToList(&list, 5);
     appendToList(&list, 3);
     appendToList(&list, 0);
-    
-    struct Node *min = minOfList(list);
-    if (min != NULL) 
-        printf("Min value - %d\n", min->value);
-    
-    struct Node *max = maxOfList(list);
-    if (max != NULL)
-        printf("Max value - %d\n", max->value);
+    printList(list);
+
+    reverseList(&list);
+    printList(list);
 
     clearList(&list);
 

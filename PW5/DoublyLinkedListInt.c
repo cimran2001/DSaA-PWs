@@ -1,4 +1,4 @@
-#include "DoublyLinkedList.h"
+#include "DoublyLinkedListInt.h"
 
 struct DoublyLinkedList createDoublyLinkedList() {
     struct DoublyLinkedList list;
@@ -96,4 +96,23 @@ struct Node *maxOfList(struct DoublyLinkedList list) {
     } while (current != list.head);
 
     return max;
+}
+
+void reverseList(struct DoublyLinkedList *list) {
+    struct Node *current = list->head;
+
+    if (current == NULL)
+        return;
+
+    do {
+        struct Node *temp = current->previous;
+        current->previous = current->next;
+        current->next = temp;
+
+        current = current->previous;
+    } while (current != list->head);
+
+    struct Node *temp = list->head;
+    list->head = list->tail;
+    list->tail = temp;
 }

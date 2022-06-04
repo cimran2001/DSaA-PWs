@@ -1,5 +1,5 @@
-#ifndef __DOUBLY_LINKED_LIST_H__
-#define __DOUBLY_LINKED_LIST_H__
+#ifndef __DOUBLY_LINKED_LIST_INT_H__
+#define __DOUBLY_LINKED_LIST_INT_H__
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -23,5 +23,6 @@ void clearList(struct DoublyLinkedList *list);
 void printList(struct DoublyLinkedList list);
 struct Node *minOfList(struct DoublyLinkedList list);
 struct Node *maxOfList(struct DoublyLinkedList list);
+void reverseList(struct DoublyLinkedList *list);
 
 #endif
